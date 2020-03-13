@@ -8,6 +8,7 @@ import SignOut from "./containers/Auth/SignOut/SignOut";
 import { connect } from "react-redux";
 import { Redirect } from "react-router";
 import * as actionCreators from "./store/actions/index";
+import Products from "./containers/Products/Products";
 
 class App extends Component {
   componentDidMount() {
@@ -18,6 +19,7 @@ class App extends Component {
       <Switch>
         <Route path="/signout" exact component={SignOut} />
         <Redirect exact from="/signin" to="/" />
+        <Route path="/products" component={Products} />
         <Route path="/" exact component={() => <p>hello</p>} />
       </Switch>
     );
@@ -28,7 +30,7 @@ class App extends Component {
       <Switch>
         <Route path="/signin" exact component={SignIn} />
         <Route path="/signup" exact component={SignUp} />
-        <Route path="/" exact component={() => <p>hello</p>} />
+        <Route path="/" component={SignIn} />
       </Switch>
     );
   }
