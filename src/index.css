@@ -60,3 +60,7 @@ code {
   border-top-right-radius: 4px;
   display: none !important;
 }
+
+.Hide {
+  display: none;
+}

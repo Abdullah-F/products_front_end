@@ -1,4 +1,14 @@
 .ProductsList {
   display: flex;
   flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.ProductsList > div {
+  border-radius: 5px;
+  border-color: blue;
+  border-style: solid;
+  margin: 5px 5px;
+  padding: 2px;
 }
