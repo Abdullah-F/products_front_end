@@ -6,7 +6,6 @@ import Button from "../../UI/Button/Button";
 import Aux from "../../../hoc/Aux/Aux";
 const productsList = props => {
   const showPromotionsHandler = productId => {
-    console.log("[FROM SHOW PROMO HANDLER]", productId);
     const elem = document.getElementById(`product_${productId}`);
 
     // If the element is visible, hide it
@@ -51,7 +50,6 @@ const productsList = props => {
     return promotions;
   };
 
-  console.log("[FROM PRODUCTS LIST]", props.products);
   const products = () => {
     return props.products.map(product => {
       return (
