@@ -38,7 +38,7 @@ const productsList = props => {
             buttonType="Success"
             clicked={() => showPromotionsHandler(product.id)}
           >
-            show Promotions
+            show applied Promotions
           </Button>
           <PromotionsList
             productId={product.id}
