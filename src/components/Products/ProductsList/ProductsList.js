@@ -31,7 +31,7 @@ const productsList = props => {
 
   const getPromotions = product => {
     let promotions = null;
-    if (product.promotions) {
+    if (product.promotions.length > 0) {
       promotions = (
         <Aux>
           <Button
