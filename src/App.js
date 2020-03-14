@@ -20,7 +20,7 @@ class App extends Component {
         <Route path="/signout" exact component={SignOut} />
         <Redirect exact from="/signin" to="/" />
         <Route path="/products" component={Products} />
-        <Route path="/" exact component={() => <p>hello</p>} />
+        <Redirect from="/" to="/products" />
       </Switch>
     );
   }

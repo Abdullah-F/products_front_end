@@ -1,7 +1,19 @@
 import React, { useState } from "react";
 import Input from "../../UI/Input/Input";
 import Button from "../../UI/Button/Button";
-import Classes from "./Filter.module.css";
+import styled from "styled-components";
+
+const StyledDiv = styled.div`
+  > form {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  > form > button {
+    flex-basis: 100%;
+  }
+`;
 
 const Filter = props => {
   const [filterForm, setFilterFrom] = useState({
@@ -87,7 +99,7 @@ const Filter = props => {
     return form;
   };
 
-  return <div className={Classes.Filter}>{getForm()}</div>;
+  return <StyledDiv>{getForm()}</StyledDiv>;
 };
 
 export default Filter;

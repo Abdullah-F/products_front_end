@@ -1,9 +1,23 @@
 import React from "react";
 import Product from "./Product/Product";
 import PromotionsList from "../../Promotions/PromotionsList";
-import Classes from "./ProductsList.module.css";
 import Button from "../../UI/Button/Button";
 import Aux from "../../../hoc/Aux/Aux";
+import styled from "styled-components";
+
+const StyledDiv = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+
+  > div {
+    border-radius: 5px;
+    border-color: blue;
+    border-style: solid;
+    margin: 5px 5px;
+    padding: 2px;
+  }
+`;
 const productsList = props => {
   const showPromotionsHandler = productId => {
     const elem = document.getElementById(`product_${productId}`);
@@ -60,7 +74,7 @@ const productsList = props => {
       );
     });
   };
-  return <div className={Classes.ProductsList}>{products()}</div>;
+  return <StyledDiv>{products()}</StyledDiv>;
 };
 
 export default productsList;
