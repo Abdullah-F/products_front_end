@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Input from "../../UI/Input/Input";
 import Button from "../../UI/Button/Button";
+import Classes from "./Filter.module.css";
 
 const Filter = props => {
   const [filterForm, setFilterFrom] = useState({
@@ -87,7 +88,7 @@ const Filter = props => {
     return form;
   };
 
-  return <div>{getForm()}</div>;
+  return <div className={Classes.Filter}>{getForm()}</div>;
 };
 
 export default Filter;

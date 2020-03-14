@@ -1,0 +1,9 @@
+.Filter > form {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.Filter > form > button {
+  flex-basis: 100%;
+}
