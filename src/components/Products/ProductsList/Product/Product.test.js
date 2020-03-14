@@ -11,9 +11,8 @@ describe("<Product />", () => {
   beforeEach(() => {
     wrapper = shallow(<Product product={{ name: "ali", price: "100" }} />);
   });
-  it("it renders one div which have two p elements inside it", () => {
-    expect(wrapper.find("div")).toHaveLength(1);
-    expect(wrapper.find("div > p")).toHaveLength(2);
+  it("it renders two p elements", () => {
+    expect(wrapper.find("p")).toHaveLength(2);
   });
 
   it("contains a p element displaying the price correclty", () => {
