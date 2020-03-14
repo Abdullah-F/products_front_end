@@ -33,7 +33,6 @@ const Filter = props => {
 
   const inputChangedHandler = (event, id) => {
     event.preventDefault();
-    console.log("[FROM INPUT CHANGE HANDLER]", id);
     const value = event.target.value;
     setFilterFrom(prevFromFilter => {
       let updatedForm = { ...prevFromFilter };

@@ -18,12 +18,10 @@ const Products = () => {
   };
 
   const onApplyFilter = filterParams => {
-    console.log("[FROM ON FILTER APPLY]", filterParams);
     setFilterParameters(filterParams);
   };
 
   useEffect(() => {
-    console.log("[FROM USE EFFECT PRODUCTS ]", filterParameters);
     const queryParams = { page: page, per_page: perPage, ...filterParameters };
     let queryString = "";
     for (const key in queryParams) {
@@ -31,7 +29,6 @@ const Products = () => {
     }
 
     queryString = queryString.slice(1, queryString.length);
-    console.log("[HERE IS THE QUERY STRING THAT WILL GET SENT]", queryString);
 
     const headers = {
       "Content-Type": "application/json",
