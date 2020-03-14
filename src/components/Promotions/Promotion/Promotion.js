@@ -1,6 +1,5 @@
 import React from "react";
 import Classes from "./Promotion.module.css";
-import Button from "../../UI/Button/Button"
 
 const promotion = props => {
   return (
@@ -11,10 +10,6 @@ const promotion = props => {
       <p>
         status: <span> {props.promotion.active ? "active" : "inactive"}</span>
       </p>
-        <Button buttonType="Success" >
-          apply
-          </Button>
-
     </div>
   );
 };

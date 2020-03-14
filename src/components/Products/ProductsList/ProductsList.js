@@ -3,6 +3,7 @@ import Product from "./Product/Product";
 import PromotionsList from "../../Promotions/PromotionsList";
 import Classes from "./ProductsList.module.css";
 import Button from "../../UI/Button/Button";
+import Aux from "../../../hoc/Aux/Aux";
 const productsList = props => {
   const showPromotionsHandler = productId => {
     console.log("[FROM SHOW PROMO HANDLER]", productId);
@@ -28,12 +29,11 @@ const productsList = props => {
     elem.style.display = "none";
   };
 
-  console.log("[FROM PRODUCTS LIST]", props.products);
-  const products = () => {
-    return props.products.map(product => {
-      return (
-        <div key={product.id}>
-          <Product product={product} />
+  const getPromotions = product => {
+    let promotions = null;
+    if (product.promotions) {
+      promotions = (
+        <Aux>
           <Button
             buttonType="Success"
             clicked={() => showPromotionsHandler(product.id)}
@@ -41,10 +41,23 @@ const productsList = props => {
             show Promotions
           </Button>
           <PromotionsList
-            productId={`product_${product.id}`}
+            productId={product.id}
             classes={"Hide"}
             promotions={product.promotions}
           />
+        </Aux>
+      );
+    }
+    return promotions;
+  };
+
+  console.log("[FROM PRODUCTS LIST]", props.products);
+  const products = () => {
+    return props.products.map(product => {
+      return (
+        <div key={product.id}>
+          <Product product={product} />
+          {getPromotions(product)}
         </div>
       );
     });

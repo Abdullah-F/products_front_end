@@ -4,7 +4,7 @@ const product = props => {
   return (
     <div className={Classes.Product}>
       <p>
-        Name: <span>{props.product.name}</span>{" "}
+        Name: <span>{props.product.name}</span>
       </p>
       <p>
         Price: <span>{props.product.price}</span>

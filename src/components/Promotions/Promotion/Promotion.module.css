@@ -1,6 +1,6 @@
 .Promotion {
   text-align: center;
-  display: inline-flex;
+  display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-content: space-around;
