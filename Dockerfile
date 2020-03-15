@@ -8,3 +8,4 @@ COPY . /app/
 
 # #prepare the contiainer for building react
 RUN npm install --silent
+RUN npm install react-scripts@3.4.0 -g --silent
